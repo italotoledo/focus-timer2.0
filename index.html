@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FocusTimer 2.0</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script type="module" src="./src/main.js" defer></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app" class="flex">
+      <!-- Seção do Timer -->
+      <section id="timer">
+        <span id="minutes">25</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+
+        <!-- Seção dos controles do timer -->
+        <section id="controls" class="flex">
+          <button
+            data-action="toggleRunning"
+            class="ph ph-play-circle"
+          ></button>
+          <button
+            data-action="toggleRunning"
+            class="ph ph-pause-circle"
+          ></button>
+          <button data-action="reset" class="ph ph-stop-circle"></button>
+          <button data-action="addMinutes" class="ph ph-plus-circle"></button>
+          <button data-action="subMinutes" class="ph ph-minus-circle"></button>
+        </section>
+      </section>
+
+      <!-- Seção dos botões de sons -->
+      <section id="songs">
+        <button
+          data-action="florestSong"
+          id="florestSong"
+          class="ph ph-tree"
+        ></button>
+        <button
+          data-action="rainSong"
+          id="rainSong"
+          class="ph ph-cloud-rain"
+        ></button>
+        <button
+          data-action="cafeteriaSong"
+          id="cafeteriaSong"
+          class="ph ph-coffee"
+        ></button>
+        <button
+          data-action="fireplaceSong"
+          id="fireplaceSong"
+          class="ph ph-fire"
+        ></button>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-text-button: #323238;
+  --color-text-button-active: #ffffff;
+  --color-bg-button: #e1e1e6;
+  --color-bg-button-active: #02799d;
+  --color-text: #323238;
+
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+/* GENERAL */
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+/* BUTTON */
+
+button {
+  color: var(--color-text-button);
+  cursor: pointer;
+}
+
+/* APP */
+
+#app {
+  gap: 19.2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+#app span {
+  font-size: 12.6rem;
+}
+
+/* TIMER */
+
+#timer {
+  margin-bottom: 4.8rem;
+  color: var(--color-text);
+}
+
+/* CONTROLS */
+
+#controls {
+  gap: 4rem;
+}
+
+#controls button {
+  font-size: 4.8rem;
+  border: none;
+  background: none;
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-stop-circle,
+html:not(.running) .ph-pause-circle {
+  display: none;
+}
+
+/* SONGS */
+
+#songs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+#songs button {
+  width: 13.8rem;
+  height: 15.2rem;
+
+  font-size: 5rem;
+
+  background-color: var(--color-bg-button);
+  border: none;
+  border-radius: 2.4rem;
+}
+
+#songs button.button-active {
+  background-color: var(--color-bg-button-active);
+  color: var(--color-text-button-active);
+  transition: 0.2s;
+}
